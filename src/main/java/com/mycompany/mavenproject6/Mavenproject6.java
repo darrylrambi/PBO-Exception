@@ -16,13 +16,14 @@ public class Mavenproject6 {
         try {
             u1.login();
         } catch (LoginFailedException e) {
-            System.out.println(e.getMessage() + LoginFailedException.getFailedcount(u2.getUserid()) + " kali");
+            System.out.println(e.getMessage() + LoginFailedException.getFailedcount(u1.getUserid()) + " kali");
         }
 
         try {
             u2.login();
         } catch (LoginFailedException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage() + LoginFailedException.getFailedcount(u2.getUserid()) + " kali");
+
         }
 
         try {
