@@ -14,22 +14,19 @@ public class Mavenproject6 {
         UserData u2 = new UserData(123434, 8888);//Deklarasi objek kedua (ketentuan id dan password salah)
 
         try {
-            u1.login();// Lakukan login menggunakan objek pertama
+            u1.login();
         } catch (LoginFailedException e) {
             System.out.println(e.getMessage());
         }
+
         try {
-            u2.login();// Lakukan login menggunakan objek kedua
+            u2.login();
         } catch (LoginFailedException e) {
             System.out.println(e.getMessage());
         }
+
         try {
-            u2.login();// Lakukan login menggunakan objek kedua
-        } catch (LoginFailedException e) {
-            System.out.println(e.getMessage());
-        }
-        try {
-            u2.login();// Lakukan login menggunakan objek kedua
+            u2.login();
         } catch (LoginFailedException e) {
             System.out.println(e.getMessage());
         }

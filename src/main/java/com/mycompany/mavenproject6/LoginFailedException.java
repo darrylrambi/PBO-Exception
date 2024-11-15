@@ -11,17 +11,19 @@ import java.util.HashMap;
  * @author ASUS
  */
 public class LoginFailedException extends Exception {
+
     private static HashMap<Integer, Integer> failedcount = new HashMap<>();
     private int userid;
 
-    public LoginFailedException(String msg, int userid) {
+    public LoginFailedException(String msg, int user) {
         super(msg);
-        if (failedcount.containsKey(userid)) {
-            failedcount.put(userid, failedcount.get(userid) + 1);
+        this.userid = user;
+
+        if (!failedcount.containsKey(user)) {
+            failedcount.put(user, 1);
         } else {
-            failedcount.put(userid, 1);
+            failedcount.put(user, failedcount.get(user) + 1);
         }
-        this.userid = userid;
     }
 
     public static int getFailedcount(int user) {
