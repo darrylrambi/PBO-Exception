@@ -25,7 +25,7 @@ public class UserData {
 
         if (this.userid + this.password != 10000) {
             this.isLoggedIn = false;
-            throw new LoginFailedException("Login user " + userid + " gagal, telah gagal login " + LoginFailedException.getFailedcount(userid) + " kali", userid);
+            throw new LoginFailedException("Login user " + userid + " gagal, telah gagal login ", userid);
         } else {
             this.isLoggedIn = true;
             System.out.println("Login successful for user " + userid);
